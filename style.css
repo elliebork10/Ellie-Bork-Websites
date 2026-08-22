@@ -6,7 +6,6 @@
   --text-muted: #94a3b8;
   --accent-color: #38bdf8;
   --accent-hover: #0284c7;
-  --accent-glow: rgba(56, 189, 248, 0.15);
   --max-width: 800px;
   --radius: 12px;
   --transition: all 0.25s ease-in-out;
@@ -30,7 +29,7 @@ body {
   padding: 0 20px;
 }
 
-/* Header & Sticky Top Bar */
+/* Header & Sticky Bar */
 .site-header {
   max-width: 100%;
   border-bottom: 1px solid var(--border-color);
@@ -48,7 +47,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
 }
 
 .brand {
@@ -60,7 +58,6 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: -0.01em;
 }
 
 .brand-tagline {
@@ -73,51 +70,41 @@ body {
   font-size: 0.875rem;
 }
 
-/* Structural Layout */
+/* Main Sections */
 section, footer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 50px 0;
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Typography */
 h1, h2, h3 {
-  line-height: 1.25;
-  margin-bottom: 16px;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.25;
 }
 
-h1 { font-size: 2.75rem; }
-h2 { font-size: 1.85rem; }
-h3 { font-size: 1.25rem; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.2rem; }
 
 p {
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 20px;
 }
 
-.section-subtitle {
-  text-align: center;
-  font-weight: 600;
-}
-
-strong { color: var(--text-main); }
-
-/* Call to Action Button */
+/* Call To Action Buttons */
 .cta-btn {
   display: inline-block;
   background-color: var(--accent-color);
   color: #0f172a;
   font-weight: 700;
-  padding: 14px 28px;
+  padding: 12px 24px;
   border-radius: var(--radius);
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
   transition: var(--transition);
   text-align: center;
 }
@@ -125,65 +112,27 @@ strong { color: var(--text-main); }
 .cta-btn:hover {
   background-color: var(--accent-hover);
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .submit-btn {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
-/* Hero Section */
-.hero {
-  padding-top: 80px;
-  text-align: center;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 650px;
-  margin: 0 auto 30px auto;
-}
-
-/* Agitation Section */
-.agitation p {
-  font-size: 1.2rem;
-  font-style: italic;
-  border-left: 4px solid var(--accent-color);
-  padding-left: 20px;
-  color: var(--text-main);
-}
-
-/* Solution Section */
-.solution ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.solution li {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 16px 20px;
-  border-radius: var(--radius);
-  margin-bottom: 12px;
-  color: var(--text-muted);
-}
-
-/* Form Container */
-.offer {
+/* Form Styles */
+.request-section {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #quote-form label {
   display: block;
   font-weight: 600;
-  margin: 20px 0 8px 0;
+  margin: 16px 0 6px 0;
   color: var(--text-main);
 }
 
@@ -192,7 +141,7 @@ strong { color: var(--text-main); }
 #quote-form input[type="text"],
 #quote-form input[type="email"] {
   width: 100%;
-  padding: 12px 16px;
+  padding: 12px;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -209,35 +158,19 @@ strong { color: var(--text-main); }
   border-color: var(--accent-color);
 }
 
-/* Testimonials */
-blockquote {
-  background: var(--card-bg);
-  border-left: 4px solid var(--accent-color);
-  padding: 24px;
-  border-radius: 0 var(--radius) var(--radius) 0;
-  font-style: italic;
-  color: var(--text-main);
-}
-
-/* Portfolio Grid */
+/* Portfolio Cards */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .project-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: 24px;
-  transition: var(--transition);
-}
-
-.project-card:hover {
-  border-color: var(--accent-color);
-  transform: translateY(-4px);
+  padding: 20px;
 }
 
 .project-card a {
@@ -254,23 +187,11 @@ blockquote {
 footer {
   border-bottom: none;
   text-align: center;
-  padding: 40px 0;
+  padding: 30px 0;
   font-size: 0.9rem;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .header-btn {
-    width: 100%;
-  }
-
   h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-
-  .offer { padding: 20px; }
+  .request-section { padding: 20px; }
 }
